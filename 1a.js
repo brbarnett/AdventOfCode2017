@@ -8,16 +8,6 @@ class Solution {
         console.log('Result:', result);
     }
 
-    tests(helpers) {
-        const instance = this;
-        describe('1a', function () {
-            helpers.stringReturnsNumber('1122', 3, instance.captcha);
-            helpers.stringReturnsNumber('1111', 4, instance.captcha);
-            helpers.stringReturnsNumber('1234', 0, instance.captcha);
-            helpers.stringReturnsNumber('91212129', 9, instance.captcha);
-        });
-    }
-
     captcha(input) {
         let accum = 0;
         for (let i = 0; i < input.length; i++) {

@@ -10,19 +10,6 @@ class Solution {
         console.log('Result:', result);
     }
 
-    tests(helpers) {
-        const instance = this;
-        describe('2a', function () {
-            helpers.stringReturnsNumber('5	1	9	5', 8, instance.checksum);
-            helpers.stringReturnsNumber('7	5	3', 4, instance.checksum);
-            helpers.stringReturnsNumber('2	4	6	8', 6, instance.checksum);
-            helpers.stringReturnsNumber(
-                `5	1	9	5
-            7	5	3
-            2	4	6	8`, 18, instance.checksum);
-        });
-    }
-
     checksum(input) {
         return _(input)
             .chain()

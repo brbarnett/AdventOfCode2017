@@ -8,17 +8,6 @@ class Solution {
         console.log('Result:', result);
     }
 
-    tests(helpers) {
-        const instance = this;
-        describe('1b', function () {
-            helpers.stringReturnsNumber('1212', 6, instance.captcha);
-            helpers.stringReturnsNumber('1221', 0, instance.captcha);
-            helpers.stringReturnsNumber('123425', 4, instance.captcha);
-            helpers.stringReturnsNumber('123123', 12, instance.captcha);
-            helpers.stringReturnsNumber('12131415', 4, instance.captcha);
-        });
-    }
-
     captcha(input) {
         let accum = 0;
         for (let i = 0; i < input.length; i++) {
