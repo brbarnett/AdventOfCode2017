@@ -1,9 +1,3 @@
-const
-    day1a = new (require('./1a'))(),
-    day1b = new (require('./1b'))(),
-    day2a = new (require('./2a'))(),
-    day2b = new (require('./2b'))();
-
 const assert = require('assert');
 
 class Helpers {
