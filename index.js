@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const solution = require('./2b');
+const solution = new (require('./2b'))();
 
 // custom lodash functions
 (function() {
@@ -11,4 +11,4 @@ const solution = require('./2b');
     });
 }());
 
-new solution().run();
+solution.run();
