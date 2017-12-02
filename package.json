@@ -1,0 +1,10 @@
+{
+  "name": "advent-of-code-2017",
+  "version": "1.0.0",
+  "description": "Repository for the 2017 Advent of Code",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Brandon R Barnett",
+  "license": "ISC"
+}
