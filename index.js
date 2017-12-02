@@ -1,6 +1,6 @@
-const process = require('./1b');
+const process = require('./2a');
 
-process.run(test);
+new process().run(test);
 
 function test(input, expected, eval) {
     let output = eval(input);
