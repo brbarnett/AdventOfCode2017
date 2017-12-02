@@ -1,4 +1,4 @@
-const process = require('./2a');
+const process = require('./2b');
 
 new process().run(test);
 
