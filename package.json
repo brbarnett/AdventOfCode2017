@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Repository for the 2017 Advent of Code",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Brandon R Barnett",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "mocha": "^4.0.1"
   }
 }
