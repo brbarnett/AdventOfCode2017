@@ -20,7 +20,7 @@ class Solution {
                     .map(x => +x)   // convert all to number
                     .value();
 
-                result += _(this.cartesianProductOf(data, data))
+                result += _(_.cartesianProduct(data, data))
                     .chain()
                     .filter(x => x[0] !== x[1]) // shortcut to avoid self/self
                     .filter(x => x[0] % x[1] === 0) // check where (a) evenly divisible by (b)
@@ -31,17 +31,22 @@ class Solution {
             }, 0)
             .value()
     }
-
-    // reference: https://stackoverflow.com/questions/12303989/cartesian-product-of-multiple-arrays-in-javascript
-    cartesianProductOf() {
-        return _.reduce(arguments, function (a, b) {
-            return _.flatten(_.map(a, function (x) {
-                return _.map(b, function (y) {
-                    return x.concat([y]);
-                });
-            }), true);
-        }, [[]]);
-    };
 }
+
+// custom lodash functions
+(function () {
+    _.mixin({
+        // reference: https://stackoverflow.com/questions/12303989/cartesian-product-of-multiple-arrays-in-javascript
+        'cartesianProduct': function () {
+            return _.reduce(arguments, function (a, b) {
+                return _.flatten(_.map(a, function (x) {
+                    return _.map(b, function (y) {
+                        return x.concat([y]);
+                    });
+                }), true);
+            }, [[]]);
+        }
+    });
+}());
 
 module.exports = Solution;

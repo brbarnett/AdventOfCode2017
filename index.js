@@ -7,7 +7,7 @@ function test(input, expected, eval) {
     console.log('Input:', input, '; Calculated:', output, '; Expected:', expected, '; Pass:', output === expected)
 }
 
-// custom lodash methods
+// custom lodash functions
 (function() {
     _.mixin({
         'debug': function (val) {
