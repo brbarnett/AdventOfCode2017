@@ -1,6 +1,5 @@
 const fs = require('fs'),
-    _ = require('lodash'),
-    assert = require('assert');
+    _ = require('lodash');
 
 class Solution {
     run() {
