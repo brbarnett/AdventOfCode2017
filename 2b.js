@@ -20,11 +20,12 @@ class Solution {
                     .map(x => +x)   // convert all to number
                     .value();
 
-                result += +_(this.cartesianProductOf(data, data))
+                result += _(this.cartesianProductOf(data, data))
                     .chain()
                     .filter(x => x[0] !== x[1]) // shortcut to avoid self/self
                     .filter(x => x[0] % x[1] === 0) // check where (a) evenly divisible by (b)
                     .map(x => x[0] / x[1])  // divide (a) by (b)
+                    .first()
                     .value();
                 return result;
             }, 0)
