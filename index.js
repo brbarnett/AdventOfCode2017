@@ -1,11 +1,5 @@
 const _ = require('lodash');
-const process = require('./2b');
-
-function test(input, expected, eval) {
-    let output = eval(input);
-
-    console.log('Input:', input, '; Calculated:', output, '; Expected:', expected, '; Pass:', output === expected)
-}
+const solution = require('./2b');
 
 // custom lodash functions
 (function() {
@@ -17,4 +11,4 @@ function test(input, expected, eval) {
     });
 }());
 
-new process().run(test);
+new solution().run();

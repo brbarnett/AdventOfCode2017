@@ -2,7 +2,7 @@ const fs = require('fs'),
     _ = require('lodash');
 
 class Solution {
-    run(test) {
+    run() {
         const input = fs.readFileSync('./2.dat', 'utf8');
 
         const result = this.checksum(input);
@@ -25,7 +25,7 @@ class Solution {
                     .filter(x => x[0] !== x[1]) // shortcut to avoid self/self
                     .filter(x => x[0] % x[1] === 0) // check where (a) evenly divisible by (b)
                     .map(x => x[0] / x[1])  // divide (a) by (b)
-                    .first()
+                    .first()    // take first value (we were promised exactly one result)
                     .value();
                 return result;
             }, 0)
