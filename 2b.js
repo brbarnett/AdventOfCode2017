@@ -1,5 +1,6 @@
 const fs = require('fs'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    assert = require('assert');
 
 class Solution {
     run() {
@@ -7,6 +8,19 @@ class Solution {
 
         const result = this.checksum(input);
         console.log('Result:', result); // returns 294 for final answer
+    }
+
+    tests(helpers) {
+        const instance = this;
+        describe('2b', function () {
+            helpers.stringReturnsNumber('5	9	2	8', 4, instance.checksum);
+            helpers.stringReturnsNumber('9	4	7	3', 3, instance.checksum);
+            helpers.stringReturnsNumber('3	8	6	5', 2, instance.checksum);
+            helpers.stringReturnsNumber(
+                `5	9	2	8
+            9	4	7	3
+            3	8	6	5`, 9, instance.checksum);
+        });
     }
 
     checksum(input) {
