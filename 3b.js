@@ -3,7 +3,7 @@ const fs = require('fs'),
 
 class Solution {
     run() {
-        const input = 880;
+        const input = 277678;
 
         const result = this.solve(input);
         console.log('Result:', result); // 302948 is too high
@@ -66,13 +66,13 @@ class Solution {
             const minimumDistance = Math.floor(sizeOfGrid / 2); // number is on outer ring, so min by manhattan calc
             const positionOnOuterRing = square - Math.pow(sizeOfGrid - 2, 2);   // find which position on the outer ring
             const ringSteps = Math.max(sizeOfGrid - 1, 1);  // calc ring steps, which is indexed value per leg
-            const absolutePosition = positionOnOuterRing / ringSteps;   // get absolute position on ring
+            const absolutePosition = +(positionOnOuterRing / ringSteps).toFixed(5);   // get absolute position on ring
             const relativePosition = absolutePosition - Math.floor(absolutePosition);   // get relative to any leg (doesn't matter which)
 
-            const stepsOnLeg = relativePosition * ringSteps;
+            const stepsOnLeg = Math.round(relativePosition * ringSteps);
 
             let legIndex = Math.floor(absolutePosition);
-            if (legIndex === sizeOfGrid + 1)
+            if (legIndex === 4)
                 legIndex = 0;
 
             let position = [0, 0];
