@@ -1,5 +1,4 @@
-const fs = require('fs'),
-    _ = require('lodash');
+const _ = require('lodash');
 
 class Solution {
     run() {

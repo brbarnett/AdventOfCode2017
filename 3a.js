@@ -1,6 +1,3 @@
-const fs = require('fs'),
-    _ = require('lodash');
-
 class Solution {
     run() {
         const input = 277678;
