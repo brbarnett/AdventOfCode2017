@@ -8,4 +8,5 @@ describe('3b', () => {
     testHelpers.stringReturnsNumber(57, 59, solution.solve);
     testHelpers.stringReturnsNumber(304, 330, solution.solve);
     testHelpers.stringReturnsNumber(747, 806, solution.solve);
+    testHelpers.stringReturnsNumber(800, 806, solution.solve);
 });
