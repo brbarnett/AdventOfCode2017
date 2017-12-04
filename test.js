@@ -11,4 +11,5 @@
 // require('./3b.tests');
 
 // Day 4
-require('./4a.tests');
+// require('./4a.tests');
+require('./4b.tests');
