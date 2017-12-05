@@ -19,7 +19,6 @@ class Solution {
         let currentIndex = 0;
         let steps = 0;
         while (currentIndex >= 0 && currentIndex < arr.length) {  // while we are in the 'maze,' iterate
-
             let jumps = arr[currentIndex];  // save jumps from current index
             arr[currentIndex] += 1; // increment array at current index
             currentIndex += jumps;  // increment current index by number of jumps
