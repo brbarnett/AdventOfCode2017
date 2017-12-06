@@ -4,7 +4,7 @@ const solution = new (require('./5a'))(),
 const assert = require('assert');
 
 describe('5a', () => {
-    testHelpers.stringReturnsNumber(`0
+    testHelpers.registerUnitTest(`0
     3
     0
     1

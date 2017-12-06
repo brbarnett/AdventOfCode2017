@@ -4,10 +4,10 @@ const solution = new (require('./2b'))(),
 const assert = require('assert');
 
 describe('2b', () => {
-    testHelpers.stringReturnsNumber('5	9	2	8', 4, solution.checksum);
-    testHelpers.stringReturnsNumber('9	4	7	3', 3, solution.checksum);
-    testHelpers.stringReturnsNumber('3	8	6	5', 2, solution.checksum);
-    testHelpers.stringReturnsNumber(
+    testHelpers.registerUnitTest('5	9	2	8', 4, solution.checksum);
+    testHelpers.registerUnitTest('9	4	7	3', 3, solution.checksum);
+    testHelpers.registerUnitTest('3	8	6	5', 2, solution.checksum);
+    testHelpers.registerUnitTest(
         `5	9	2	8
     9	4	7	3
     3	8	6	5`, 9, solution.checksum);

@@ -4,8 +4,8 @@ const solution = new (require('./1a'))(),
 const assert = require('assert');
 
 describe('1a', () => {
-    testHelpers.stringReturnsNumber('1122', 3, solution.captcha);
-    testHelpers.stringReturnsNumber('1111', 4, solution.captcha);
-    testHelpers.stringReturnsNumber('1234', 0, solution.captcha);
-    testHelpers.stringReturnsNumber('91212129', 9, solution.captcha);
+    testHelpers.registerUnitTest('1122', 3, solution.captcha);
+    testHelpers.registerUnitTest('1111', 4, solution.captcha);
+    testHelpers.registerUnitTest('1234', 0, solution.captcha);
+    testHelpers.registerUnitTest('91212129', 9, solution.captcha);
 });
