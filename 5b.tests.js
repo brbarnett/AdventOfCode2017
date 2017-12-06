@@ -1,4 +1,4 @@
-const solution = new (require('./5a'))(),
+const solution = new (require('./5b'))(),
     testHelpers = new (require('./test.helpers'))();
 
 const assert = require('assert');
