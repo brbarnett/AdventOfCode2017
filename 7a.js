@@ -8,15 +8,29 @@ class Solution {
         const input = fs.readFileSync('./7.dat', 'utf8');
 
         const result = this.solve(input);
-        console.log('Result:', result);
+        console.log('Result:', result); // azqje
     }
 
     solve(input) {
-        return _(input)
+        const parsed = _(input)
             .chain()
             .split('\r\n')
             .map(this.parse)
             .value();
+
+            const stacked = _(parsed)
+                .chain()
+                .filter(x => typeof x.programs !== 'undefined')
+                .flatMap(x => x.programs)
+                .uniq()
+                .value();
+
+            return _(parsed)
+                .chain()
+                .map(x => x.name)
+                .difference(stacked)
+                .first()
+                .value();
     }
 
     parse(row) {
