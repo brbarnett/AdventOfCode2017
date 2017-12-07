@@ -1,4 +1,7 @@
-const _ = require('lodash');
+const fs = require('fs'),
+    _ = require('lodash');
+
+const pattern = new RegExp(/(.+)\s\((.+)\)(?:\s->\s)?(.+)?/);
 
 class Solution {
     run() {
@@ -9,7 +12,21 @@ class Solution {
     }
 
     solve(input) {
-        return input;
+        return _(input)
+            .chain()
+            .split('\r\n')
+            .map(this.parse)
+            .value();
+    }
+
+    parse(row) {
+        const data = pattern.exec(row);
+
+        return {
+            name: data[1],
+            weight: +data[2],
+            programs: data[3] ? data[3].split(',').map(x => x.trim()) : []
+        };
     }
 }
 
