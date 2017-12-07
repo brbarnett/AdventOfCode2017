@@ -19,4 +19,7 @@
 // require('./5b.tests');
 
 // Day 6
-require('./6a.tests');
+// require('./6a.tests');
+
+// Day 7
+require('./7a.tests')
